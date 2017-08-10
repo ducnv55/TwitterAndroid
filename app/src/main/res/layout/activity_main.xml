@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    tools:context="com.example.nguyenvietduc.twitter.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/ic_twitter"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/welcomeScreenTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/imageView"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="50dp"
+        android:textSize="40sp"
+        android:textColor="@color/colorWhite"
+        android:lines="2"
+        android:text="Welcome to Twitter" />
+
+    <TextView
+        android:id="@+id/welcomeScreenTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/welcomeScreenTextView1"
+        android:layout_alignStart="@+id/welcomeScreenTextView1"
+        android:layout_below="@+id/welcomeScreenTextView1"
+        android:layout_marginTop="10dp"
+        android:layout_alignRight="@+id/welcomeScreenTextView1"
+        android:layout_alignEnd="@id/welcomeScreenTextView1"
+        android:textSize="20sp"
+        android:textColor="@color/colorWhite"
+        android:lines="2"
+        android:text="See what's happening in the world right now" />
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeScreenTextView2"
+        android:layout_alignLeft="@id/welcomeScreenTextView2"
+        android:layout_alignRight="@id/welcomeScreenTextView2"
+        android:background="@drawable/round_button"
+        android:textColor="@color/colorBackground"
+        android:textStyle="bold"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:text="Sign up"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/signUpButton"
+        android:layout_marginLeft="100dp"
+        android:layout_alignRight="@id/signUpButton"
+        android:layout_marginRight="100dp"
+        android:layout_below="@id/signUpButton"
+        android:background="@color/colorBackground"
+        android:textColor="@color/colorWhite"
+        android:text="Login"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+
+    <com.twitter.sdk.android.core.identity.TwitterLoginButton
+        android:id="@+id/twitterLoginButton"
+        android:layout_alignLeft="@id/signUpButton"
+        android:layout_alignRight="@id/signUpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        />
+</RelativeLayout>
